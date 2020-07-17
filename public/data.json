@@ -1,0 +1,95 @@
+{
+  "skills": [
+    {
+      "img": "html-5.svg",
+      "title": "HTML5",
+      "desc": "Standart markup language to build a web page structure"
+    },
+    {
+      "img": "css-3.svg",
+      "title": "CSS3",
+      "desc": "Basic styling to make beautiful design and adding some animation on web page"
+    },
+    {
+      "img": "javascript.svg",
+      "title": "JavaScript",
+      "desc": "Client side languange to create an interactive web application and make user experince more powerfull"
+    },
+    {
+      "img": "php.svg",
+      "title": "PHP",
+      "desc": "Popular Server side language to make powerfull web application"
+    },
+    {
+      "img": "sass.svg",
+      "title": "Sass",
+      "desc": "CSS pre-prosesor to make styling web application more powerfull"
+    },
+    {
+      "img": "bootstrap.svg",
+      "title": "Bootstrap",
+      "desc": "Most popular css framework to build web page component"
+    },
+    {
+      "img": "jquery.svg",
+      "title": "jQuery",
+      "desc": "Most used javascript library to make interactive web page"
+    },
+    {
+      "img": "codeigniter.svg",
+      "title": "Codeigniter",
+      "desc": "Friendly web framework from PHP to make web application more easier"
+    },
+    {
+      "img": "laravel.svg",
+      "title": "Laravel",
+      "desc": "Very popular PHP web framework to make web application more secure and powerfull"
+    },
+    {
+      "img": "express.svg",
+      "title": "Express.js",
+      "desc": "One of best back-end framework to build REST API from JavaScript"
+    },
+    {
+      "img": "vue.svg",
+      "title": "Vue.js",
+      "desc": "Easy to learn and powerfull modern front-end web framework from JavaScript"
+    },
+    {
+      "img": "vuetifyjs.svg",
+      "title": "Vuetify",
+      "desc": "Material design for Vue.js to make beautiful component web application"
+    },
+    {
+      "img": "mysql.svg",
+      "title": "MySQL",
+      "desc": "Very popular relational database to store data in web application"
+    },
+    {
+      "img": "firebase.svg",
+      "title": "Firebase",
+      "desc": "Realtime database from Google to make realtime web application"
+    },
+    {
+      "img": "github-icon.svg",
+      "title": "Github",
+      "desc": "Most used and very popular version control to manage a project like web application project"
+    }
+  ],
+  "projects":[
+    {
+      "title": "Quarantine Project",
+      "desc": "This project contains a collection of <span class='highlight'>HTML</span>, <span class='highlight'>CSS</span>, and <span class='highlight'>JavaScript</span> projects when filling in the activity gap due to the covid-quarantine period",
+      "url": "https://dennisthandy.github.io/quarantine-projects/public"
+    },
+    {
+      "title": "Peminatan SMA",
+      "desc": "This is project made for help final project an college student, I've made using some framework like <span class='highlight'>Codeigniter</span>, <span class='highlight'>Bootstrap</span>, and <span class='highlight'>jQuery</span> with <span class='highlight'>MySQL</span> database",
+      "url": "http://peminatansma.rf.gd/"
+    },{
+      "title": "MyPajale",
+      "desc": "This project was made because I've invited my lecture in his project and i handle this web, simply i made use <span class='highlight'>Bootstrap</span> template for front-end and some <span class='highlight'>jQuery</span> for functionality",
+      "url": "http://mypajale.id/"
+    }
+  ]
+}
