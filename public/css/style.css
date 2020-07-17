@@ -66,6 +66,7 @@ body {
   border-radius: 50%;
   background-color: #ccc;
   object-fit: contain;
+  flex: none;
 }
 
 .skill {
