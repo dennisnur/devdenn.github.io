@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,9 +9,36 @@
   scroll-behavior: smooth;
 }
 
+.dark {
+  background-color: #3d3b6b;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff;
+  color: #000;
+}
+
 body {
-  background: #fff;
   font-family: "verdana";
+  transition: background-color 0.25s ease-in;
+}
+
+.theme {
+  position: fixed;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.75rem;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.theme__day {
+  background-image: url(../assets/icon/sun-outline.svg);
+}
+.theme__night {
+  background-image: url(../assets/icon/moon-outline.svg);
 }
 
 .first--name {
@@ -35,17 +64,45 @@ body {
   justify-content: space-around;
 }
 .nav__link {
-  color: black;
+  color: #6c63ff;
 }
 
 .intro {
-  padding: 3rem 1rem;
+  padding: 3rem;
   margin: auto;
   text-align: center;
 }
 .intro__text {
   margin: 1rem 0;
   text-align: center;
+  position: relative;
+}
+.intro__text::before {
+  content: "";
+  width: 125px;
+  height: 120px;
+  background-image: linear-gradient(#ff00b3, #a2416e);
+  position: absolute;
+  top: 10%;
+  right: 0;
+  transform: translateY(-10%);
+  z-index: -999;
+  border-radius: 50%;
+  animation: border-radius-animation 1.2s linear infinite alternate-reverse;
+}
+@keyframes border-radius-animation {
+  0% {
+    border-radius: 25% 50% 50% 50%;
+  }
+  25% {
+    border-radius: 50% 25% 50% 50%;
+  }
+  50% {
+    border-radius: 50% 50% 25% 50%;
+  }
+  100% {
+    border-radius: 50% 50% 50% 25%;
+  }
 }
 .intro__subtitle {
   color: #6c63ff;
@@ -67,10 +124,11 @@ body {
   background-color: #ccc;
   object-fit: contain;
   flex: none;
+  position: relative;
 }
 
 .skill {
-  padding: 3rem 1rem;
+  padding: 3rem;
   margin: auto;
 }
 .skill__container {
@@ -91,9 +149,12 @@ body {
 .skill__desc {
   color: rgba(0, 0, 0, 0.5);
 }
+.skill__url {
+  color: hotpink;
+}
 
 .project {
-  padding: 3rem 1rem;
+  padding: 3rem;
   margin: auto;
 }
 .project__container {
@@ -121,11 +182,14 @@ body {
 }
 
 .contact {
-  padding: 3rem 1rem;
+  padding: 3rem;
   margin: auto;
 }
 .contact__desc {
   margin-top: 2rem;
+}
+.contact__email {
+  color: hotpink;
 }
 
 .footer {
@@ -160,7 +224,7 @@ hr {
   }
 
   .intro {
-    width: 60%;
+    width: 70%;
   }
   .intro__info {
     display: flex;
@@ -174,15 +238,15 @@ hr {
   }
 
   .skill {
-    width: 60%;
+    width: 70%;
   }
 
   .project {
-    width: 60%;
+    width: 70%;
   }
 
   .contact {
-    width: 60%;
+    width: 70%;
   }
 
   .footer {
@@ -195,7 +259,7 @@ hr {
   }
 
   hr {
-    width: 60%;
+    width: 70%;
     margin: auto;
   }
 }
