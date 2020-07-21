@@ -3,9 +3,8 @@ fetch("./public/data.json")
  .then((data) => {
   generateSkillCard(data.skills);
   generateProjectCard(data.projects);
+  changeTheme();
  });
-
-changeTheme();
 
 function generateSkillCard(data) {
  let html = "";
@@ -47,21 +46,33 @@ function generateProjectCard(data) {
 
 function changeTheme() {
  const themeButton = document.querySelector(".theme");
- //  const nightButton = document.querySelector(".theme__button--night");
+ const navLink = document.querySelectorAll(".nav__link");
+ const skillDesc = document.querySelectorAll(".skill__desc");
+ const projectDesc = document.querySelectorAll(".project__desc");
 
  themeButton.addEventListener("click", (e) => {
   e.preventDefault();
-  let check = e.target.classList.contains("theme__day");
-  if (check) {
+
+  document.body.classList.toggle("dark");
+
+  navLink.forEach((el) => {
+   el.classList.toggle("nav__link--light");
+  });
+
+  skillDesc.forEach((el) => {
+   el.classList.toggle("skill__desc--light");
+  });
+
+  projectDesc.forEach((el) => {
+   el.classList.toggle("project__desc--light");
+  });
+
+  if (e.target.classList.contains("theme__day")) {
    e.target.classList.remove("theme__day");
    e.target.classList.add("theme__night");
-   document.body.classList.remove("light");
-   document.body.classList.add("dark");
   } else {
    e.target.classList.remove("theme__night");
    e.target.classList.add("theme__day");
-   document.body.classList.remove("dark");
-   document.body.classList.add("light");
   }
  });
 }

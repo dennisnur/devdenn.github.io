@@ -14,13 +14,10 @@
   color: #fff;
 }
 
-.light {
-  background-color: #fff;
-  color: #000;
-}
-
 body {
   font-family: "verdana";
+  background-color: #fff;
+  color: #000;
   transition: background-color 0.25s ease-in;
 }
 
@@ -64,7 +61,10 @@ body {
   justify-content: space-around;
 }
 .nav__link {
-  color: #6c63ff;
+  color: black;
+}
+.nav__link--light {
+  color: white;
 }
 
 .intro {
@@ -75,34 +75,6 @@ body {
 .intro__text {
   margin: 1rem 0;
   text-align: center;
-  position: relative;
-}
-.intro__text::before {
-  content: "";
-  width: 125px;
-  height: 120px;
-  background-image: linear-gradient(#ff00b3, #a2416e);
-  position: absolute;
-  top: 10%;
-  right: 0;
-  transform: translateY(-10%);
-  z-index: -999;
-  border-radius: 50%;
-  animation: border-radius-animation 1.2s linear infinite alternate-reverse;
-}
-@keyframes border-radius-animation {
-  0% {
-    border-radius: 25% 50% 50% 50%;
-  }
-  25% {
-    border-radius: 50% 25% 50% 50%;
-  }
-  50% {
-    border-radius: 50% 50% 25% 50%;
-  }
-  100% {
-    border-radius: 50% 50% 50% 25%;
-  }
 }
 .intro__subtitle {
   color: #6c63ff;
@@ -114,7 +86,7 @@ body {
   text-align: left;
 }
 .intro__img {
-  max-width: 20rem;
+  max-width: 18rem;
   margin-top: 3.5rem;
 }
 .intro__profile {
@@ -125,6 +97,7 @@ body {
   object-fit: contain;
   flex: none;
   position: relative;
+  box-shadow: -5px 10px 0 #6c63ff;
 }
 
 .skill {
@@ -148,6 +121,9 @@ body {
 }
 .skill__desc {
   color: rgba(0, 0, 0, 0.5);
+}
+.skill__desc--light {
+  color: rgba(255, 255, 255, 0.5);
 }
 .skill__url {
   color: hotpink;
@@ -179,6 +155,9 @@ body {
 }
 .project__desc {
   color: rgba(0, 0, 0, 0.5);
+}
+.project__desc--light {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .contact {
@@ -223,8 +202,13 @@ hr {
     justify-content: space-between;
   }
 
-  .intro {
+  main {
     width: 70%;
+    margin: auto;
+  }
+
+  .intro {
+    position: relative;
   }
   .intro__info {
     display: flex;
@@ -234,19 +218,7 @@ hr {
   .intro__gallery {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-  }
-
-  .skill {
-    width: 70%;
-  }
-
-  .project {
-    width: 70%;
-  }
-
-  .contact {
-    width: 70%;
+    justify-content: space-around;
   }
 
   .footer {
@@ -259,7 +231,7 @@ hr {
   }
 
   hr {
-    width: 70%;
+    width: 90%;
     margin: auto;
   }
 }
