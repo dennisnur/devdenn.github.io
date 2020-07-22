@@ -39,7 +39,7 @@ body {
 }
 
 .first--name {
-  color: #6c63ff;
+  color: #fff;
 }
 
 .nav {
@@ -48,7 +48,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  border-bottom: 15px solid #6c63ff;
+  background-color: #6c63ff;
 }
 .nav__logo {
   font-size: 20pt;
@@ -180,12 +180,12 @@ body {
 .footer__social {
   display: flex;
   margin: auto;
-  width: 10rem;
+  width: 15rem;
   justify-content: space-around;
   margin-top: 2rem;
 }
 .footer .social__icon {
-  width: 1.5rem;
+  width: 1.75rem;
 }
 
 hr {
@@ -194,6 +194,10 @@ hr {
 
 .highlight {
   color: #6c63ff;
+}
+
+.wave svg {
+  display: block;
 }
 
 @media (min-width: 700px) {
