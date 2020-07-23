@@ -57,6 +57,7 @@ body {
  align-items: center;
  padding: 1rem;
  background-color: $primary;
+ color: $ligth;
 
  &__logo {
   font-size: 20pt;
@@ -71,12 +72,17 @@ body {
  }
 
  &__link {
-  color: rgba(0, 0, 0);
+  color: $ligth;
+  font-weight: bold;
 
-  &--light {
-   color: rgba($color: white, $alpha: 1);
+  &:hover {
+   color: rgba($color: #fff, $alpha: 0.7);
   }
  }
+}
+
+.decoration {
+ display: none;
 }
 
 .intro {
@@ -223,6 +229,8 @@ body {
 
 hr {
  border-color: #ccc;
+ width: 90%;
+ margin: auto;
 }
 
 .highlight {
@@ -244,6 +252,36 @@ hr {
  main {
   width: 70%;
   margin: auto;
+  position: relative;
+
+  .decoration {
+   position: absolute;
+   z-index: -999;
+   display: block;
+
+   &--cirle-triangle {
+    &-one {
+     right: 1%;
+     top: -1%;
+     transform: rotate(315deg) scale(0.5);
+    }
+    &-two {
+     right: 1%;
+     top: 21%;
+     transform: rotate(315deg) scale(0.5);
+    }
+    &-three {
+     right: 1%;
+     top: 76%;
+     transform: rotate(315deg) scale(0.5);
+    }
+    &-four {
+     right: 1%;
+     top: 92%;
+     transform: rotate(315deg) scale(0.5);
+    }
+   }
+  }
  }
 
  .intro {

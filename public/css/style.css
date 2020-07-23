@@ -49,6 +49,7 @@ body {
   align-items: center;
   padding: 1rem;
   background-color: #6c63ff;
+  color: #fff;
 }
 .nav__logo {
   font-size: 20pt;
@@ -61,10 +62,15 @@ body {
   justify-content: space-around;
 }
 .nav__link {
-  color: black;
+  color: #fff;
+  font-weight: bold;
 }
-.nav__link--light {
-  color: white;
+.nav__link:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.decoration {
+  display: none;
 }
 
 .intro {
@@ -190,6 +196,8 @@ body {
 
 hr {
   border-color: #ccc;
+  width: 90%;
+  margin: auto;
 }
 
 .highlight {
@@ -209,6 +217,32 @@ hr {
   main {
     width: 70%;
     margin: auto;
+    position: relative;
+  }
+  main .decoration {
+    position: absolute;
+    z-index: -999;
+    display: block;
+  }
+  main .decoration--cirle-triangle-one {
+    right: 1%;
+    top: -1%;
+    transform: rotate(315deg) scale(0.5);
+  }
+  main .decoration--cirle-triangle-two {
+    right: 1%;
+    top: 21%;
+    transform: rotate(315deg) scale(0.5);
+  }
+  main .decoration--cirle-triangle-three {
+    right: 1%;
+    top: 76%;
+    transform: rotate(315deg) scale(0.5);
+  }
+  main .decoration--cirle-triangle-four {
+    right: 1%;
+    top: 92%;
+    transform: rotate(315deg) scale(0.5);
   }
 
   .intro {

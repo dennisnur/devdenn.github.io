@@ -46,7 +46,6 @@ function generateProjectCard(data) {
 
 function changeTheme() {
  const themeButton = document.querySelector(".theme");
- const navLink = document.querySelectorAll(".nav__link");
  const skillDesc = document.querySelectorAll(".skill__desc");
  const projectDesc = document.querySelectorAll(".project__desc");
 
@@ -54,10 +53,6 @@ function changeTheme() {
   e.preventDefault();
 
   document.body.classList.toggle("dark");
-
-  navLink.forEach((el) => {
-   el.classList.toggle("nav__link--light");
-  });
 
   skillDesc.forEach((el) => {
    el.classList.toggle("skill__desc--light");
@@ -67,12 +62,12 @@ function changeTheme() {
    el.classList.toggle("project__desc--light");
   });
 
-  if (e.target.classList.contains("theme__day")) {
-   e.target.classList.remove("theme__day");
-   e.target.classList.add("theme__night");
-  } else {
+  if (e.target.classList.contains("theme__night")) {
    e.target.classList.remove("theme__night");
    e.target.classList.add("theme__day");
+  } else {
+   e.target.classList.remove("theme__day");
+   e.target.classList.add("theme__night");
   }
  });
 }
