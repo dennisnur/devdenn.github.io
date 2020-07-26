@@ -231,12 +231,12 @@ hr {
   }
   main .decoration--cirle-triangle-two {
     right: 1%;
-    top: 21%;
+    top: 20%;
     transform: rotate(315deg) scale(0.5);
   }
   main .decoration--cirle-triangle-three {
     right: 1%;
-    top: 76%;
+    top: 73%;
     transform: rotate(315deg) scale(0.5);
   }
   main .decoration--cirle-triangle-four {
